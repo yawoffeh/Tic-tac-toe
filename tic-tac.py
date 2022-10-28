@@ -92,7 +92,6 @@ def main():
             print_board(board)
         else:
             print("Sorry, O\'s won the game")
-            print("Starting again....")
             exit()
 
 
@@ -100,7 +99,7 @@ def main():
             move = comp_move()
             if move == 0:
                 print("Tie Game!")
-                return 0
+                exit()
 
             else:
                 insert_letter("O", move)
@@ -109,12 +108,11 @@ def main():
 
         else:
             print("Hurray!, X\'s won the game, Good job")
-            print("Starting again....")
             exit()
 
     if is_board_full(board):
         print("Tie Game!")
-
+        exit()
 
 if __name__ == "__main__":
     while True:
